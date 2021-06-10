@@ -1,0 +1,15 @@
+<PowerSelect
+  class="change-language"
+  @options={{this.names}}
+  @destination="customized-destination"
+  @selected={{this.selectedLang}}
+  @onChange={{this.langSelected}} as |lang| >
+  {{#if (eq lang.text 'en')}}
+   <img width="16px" src="/assets/flags/en.png" alt="en"/>
+  {{/if}}
+  {{#if (eq lang.text 'fr')}}
+   <img width="16px" src="/assets/flags/fr.png" alt="fr"/>
+  {{/if}}
+   {{lang.text}} 
+</PowerSelect>
+<div id="customized-destination"></div>

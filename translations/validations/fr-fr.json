@@ -1,0 +1,9 @@
+{
+    "validations": {
+      
+      "present": "{description} ne doit pas etre vide",
+      "greaterThan": "{description} doit etre superieur {gt}",
+      "invalid": "{description} est invalide",
+      "email": "{description} doit etre une addresse valide"
+    }
+  }

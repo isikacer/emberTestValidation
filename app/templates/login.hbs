@@ -1,0 +1,62 @@
+
+ <div class="container p-5  ">
+
+   <div class="row ">
+
+
+     <div class="card mx-auto">
+       <div class="card-body ">
+         <h2 class=" ">{{t 'Account_login'}}</h2>
+         <p class=" ">{{t 'Signin_to_start_your_session'}}</p>
+
+         <div class="input-group mb-3">
+           <Input type="email" class="form-control" @value={{this.loginChangeset.email}} placeholder="Email" />
+
+           <div class="input-group-append">
+             <div class="input-group-text">
+               <FaIcon @icon="envelope" />
+             </div>
+           </div>
+
+
+         </div>
+         {{#if this.loginChangeset.error.email}}
+         <p class="text-danger p-2">{{this.loginChangeset.error.email.validation}}</p>
+         {{/if}}
+         <div class="input-group mb-3">
+           <Input type="password" class="form-control" @value={{this.loginChangeset.password}} placeholder="{{t 'Password'}}" />
+           <div class="input-group-append">
+             <div class="input-group-text">
+               <FaIcon @icon="lock" />
+             </div>
+           </div>
+
+
+         </div>
+         {{#if this.loginChangeset.error.password}}
+         <p class="text-danger p-2">{{this.loginChangeset.error.password.validation}}</p>
+         {{/if}}
+
+
+
+         <div class="row">
+
+           <div class="col-8 offset-2">
+             <Input type="button" {{on 'click' this.checkLogin}} value="{{t 'Sign_in'}}" class="btn btn-primary btn-block" />
+           </div>
+
+           <div class="col-12">
+
+           </div>
+
+         </div>
+
+       </div>
+
+     </div>
+
+   </div>
+
+
+
+ </div>
